@@ -1,0 +1,485 @@
+/* ====== BODY ====== */
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* ====== NAVBAR ====== */
+.navbar {
+    background-color: #f4f1e8;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+    padding: 1rem 2rem;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand img {
+    width: 55px;
+    height: 55px;
+}
+
+.logo-text {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: 2rem;
+    color: #2b5a2e;
+}
+
+.navbar-nav {
+    align-items: center;
+}
+
+.nav-link {
+    color: #333333 !important;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    margin: 0 1rem;
+    text-transform: capitalize;
+    font-size: 1.3rem;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.nav-link i {
+    font-size: 1.5rem;
+    margin-right: 8px;
+    font-weight: 400;
+}
+
+.nav-link:hover {
+    color: #555555 !important;
+    transform: scale(1.05);
+}
+
+.navbar-toggler {
+    border: none;
+    font-size: 2rem;
+    color: #333333;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+/* ====== BANNER ====== */
+.banner {
+    background: linear-gradient(135deg, #4CAF50 0%, #2b5a2e 100%);
+    color: #ffffff;
+    padding: 4rem 0;
+    min-height: 500px;
+    position: relative;
+    overflow: hidden;
+}
+
+.banner-text {
+    max-width: 600px;
+}
+
+.banner-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 4rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+
+.banner-subtitle {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.banner-btn {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+/* ====== IMAGEM COM BORDA ====== */
+.banner-image {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    padding: 10px;
+    border: 4px dashed #ffffff;
+    box-sizing: border-box;
+}
+
+/* ====== ANIMAÇÕES ====== */
+@keyframes slideLeft {
+    0% { opacity: 0; transform: translateX(-50px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.animate-slide-left {
+    animation: slideLeft 1s ease-out forwards;
+}
+
+.animate-fade-up {
+    animation: fadeUp 0.7s ease-out forwards;
+}
+
+.delay-1 {
+    animation-delay: 0.2s;
+}
+
+/* ====== RESPONSIVO ====== */
+@media (max-width: 991.98px) {
+    .banner {
+        text-align: center;
+        padding: 3rem 1rem;
+    }
+
+    .banner-text {
+        margin-bottom: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .banner-title {
+        font-size: 3rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .banner-subtitle {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .banner-btn {
+        font-size: 1.1rem;
+    }
+
+    .banner-image.d-block.d-lg-none {
+        width: 80%;
+        max-width: 300px;
+        max-height: 200px;
+        margin: 0.5rem auto 1rem auto;
+        height: auto;
+    }
+
+    .banner-img {
+        height: 100%;
+    }
+}
+
+/* ====== SEÇÃO GLOMEROMYCOTA ====== */
+.glomeromycota-section {
+    background-color: #ffffff;
+    padding: 4rem 1rem;
+    text-align: center;
+}
+
+.glomeromycota-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3rem;
+    font-weight: 800;
+    color: #000000;
+    margin-bottom: 1.5rem;
+}
+
+.glomeromycota-text {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.25rem;
+    color: #333333;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.highlight-link {
+    font-weight: 700;
+    color: #2b5a2e;
+    text-decoration: none;
+    margin-left: 0.3rem;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.highlight-link:hover {
+    color: #4CAF50;
+    transform: scale(1.05);
+}
+
+/* ====== FILO EXEMPLOS ====== */
+.filo-exemplos-text {
+    font-size: 1.4rem; /* aumentado */
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 0.5rem;
+    text-align: left;
+}
+
+/* ====== CARDS SCROLL ====== */
+.cards-scroll {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+
+.cards-scroll::-webkit-scrollbar {
+    height: 8px;
+}
+
+.cards-scroll::-webkit-scrollbar-thumb {
+    background: rgba(0,0,0,0.3);
+    border-radius: 4px;
+}
+
+/* ====== EXEMPLO CARD ====== */
+.exemplo-card {
+    flex: 0 0 auto;
+    width: 220px;
+    height: 300px;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.exemplo-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.exemplo-card:hover img {
+    filter: brightness(60%);
+    transform: scale(1.05);
+}
+
+.card-info {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+    padding: 0.75rem 0;
+    text-align: center;
+}
+
+.card-name {
+    font-weight: 700;
+    font-size: 1.1rem; /* maior */
+}
+
+.card-hover-text {
+    opacity: 0;
+    font-size: 1rem; /* maior */
+    transition: opacity 0.3s;
+}
+
+.exemplo-card:hover .card-hover-text {
+    opacity: 1;
+}
+/* ===== IMAGENS DECORATIVAS ===== */
+.title-wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+  text-align: center;
+}
+
+.decor-left,
+.decor-right {
+  width: 80px;
+  opacity: 0.9;
+  transition: transform 0.3s ease;
+}
+
+.decor-left {
+  transform: rotate(-15deg);
+  margin-right: 10px;
+}
+
+.decor-right {
+  transform: rotate(15deg);
+  margin-left: 10px;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 768px) {
+  .decor-left {
+    display: none; /* remove imagem esquerda */
+  }
+
+  .decor-right {
+    width: 60px;
+    transform: rotate(10deg);
+    margin-left: 5px;
+  }
+
+  .glomeromycota-title {
+    font-size: 2rem; /* título menor pra caber melhor */
+  }
+}
+/* ===== SEÇÃO CURIOSIDADES ===== */
+.curiosidades-section {
+  background: linear-gradient(135deg, #f4f1e8 0%, #e2ebc3 100%);
+  padding: 4rem 1rem;
+}
+
+.curiosidades-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 3rem;
+  font-weight: 800;
+  color: #2b5a2e;
+  margin-bottom: 1rem;
+}
+
+.curiosidades-text {
+  font-size: 1.4rem;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.curiosidades-btn {
+  font-size: 1.2rem;
+  font-weight: 600;
+  background-color: #2b5a2e;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+.curiosidades-btn:hover {
+  background-color: #4CAF50;
+}
+.curiosidades-section {
+  background: linear-gradient(180deg, #e8f5e9 0%, #c8e6c9 100%);
+  padding: 4rem 1rem 6rem 1rem; /* espaço extra no fundo p/ a grama */
+  position: relative;
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 120px; /* dá espaço real acima da grama */
+}
+
+.curiosidades-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 3rem;
+  font-weight: 800;
+  color: #1b5e20;
+  margin-bottom: 1rem;
+}
+
+.curiosidades-text {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.3rem;
+  color: #2e2e2e;
+  margin-bottom: 1.5rem;
+}
+
+.curiosidades-btn {
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 0.7rem 1.5rem;
+}
+
+.grass-strip {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  background-image: url('imagens/decoracao-3.png');
+  background-repeat: repeat-x;
+  background-size: contain;
+  background-position: bottom;
+  z-index: 1;
+  margin-top: 2rem; /* espaço acima da faixa */
+}
+
+.sobre-section {
+  background-color: #ffffff;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 6rem;
+}
+
+.sobre-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 3rem;
+  font-weight: 800;
+  color: #2b5a2e; /* verde muso */
+}
+
+.sobre-text {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2rem;
+  color: #333333;
+}
+
+.sobre-section img {
+  max-height: 300px;
+  object-fit: cover;
+}
+
+.sobre-decoracao {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('imagens/decoracao-1.png'); /* sua decoração */
+  background-repeat: no-repeat;
+  background-position: top right;
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+/* Responsivo */
+@media (max-width: 991px) {
+  .sobre-title {
+    font-size: 2.2rem;
+  }
+  .sobre-text {
+    font-size: 1rem;
+  }
+  .sobre-section img {
+    max-height: 250px;
+    margin-bottom: 1.5rem;
+  }
+}
+.sobre-section img {
+  max-height: 300px;
+  object-fit: cover;
+  border: 4px dashed #2b5a2e; /* verde musgo */
+  border-radius: 15px; /* cantos arredondados */
+  padding: 5px; /* espaço entre borda e imagem */
+  box-sizing: border-box;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.sobre-section img:hover {
+  transform: scale(1.03); /* leve zoom ao passar o mouse */
+  filter: brightness(0.9);
+}
+
+/* Responsivo */
+@media (max-width: 991px) {
+  .sobre-section img {
+    max-height: 250px;
+    margin-bottom: 1.5rem;
+  }
+}
+
